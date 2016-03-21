@@ -4,14 +4,12 @@
 
 Haskell é uma linguagem puramente funcional elaborada em 1987,que enfatiza mais o que deve ser feito e não como deve 
 ser feito. Contemplando também a clareza e uma fácil manutenção nos códigos.Levando em comparação as linguagens imperativas, é dado ao
-computador uma sequência de tarefas, os quais ele executa, podendo inclusive mudar o estado delas. Já em programação funcional não fazemos
-atribuições, mas sim definições. 
+computador uma sequência de tarefas, os quais ele executa, podendo inclusive mudar o estado delas. Já em programação funcional não fazemos atribuições, mas sim definições. 
 
 
 **Origens e Influências**
 
-Em 1930, Alonzo Church desenvolveu o cálculo de Lambda, um simples e poderoso teorema de funções.Mais a frente, em  1950 John McCarthy 
-desenvolveu Lisp, a primeira linguagem funcional, que tinha influência da teoria de lambda mas aceitando atribuições de variáveis.Em 
+Em 1930, Alonzo Church desenvolveu o cálculo de Lambda, um simples e poderoso teorema de funções.Mais a frente, em  1950 John McCarthy desenvolveu Lisp, a primeira linguagem funcional, que tinha influência da teoria de lambda mas aceitando atribuições de variáveis.Em 
 1987 havia um número enorme de linguagens funcionais e então surgiu a ideia de se criar uma única linguagem que englobasse 
 todas as melhores práticas de projeto de linguagem.Sendo assim,decidiram não começar do zero e elegeram uma linguagem 
 como base para o projeto, a linguagem Miranda, que era comercial e já usada em produção. A nova  linguagem foi batizada 
@@ -22,7 +20,7 @@ simples , possui uma variedade de aplicações e é muito poderosa.
 
 
 Haskell é uma linguagem de paradigma funcional. Em liguagens imperativas, quando  atribuímos à variável “x” o valor “5”. Em
-seguida, são feitas algumas computações e o valor daquela variável se torna “10”. Houvemudança de estado. Já em programação 
+seguida, são feitas algumas computações e o valor daquela variável se torna “10”. Houve mudança de estado. Já em programação 
 funcional não fazemos atribuições, mas sim definições.Se foi definido que “x” é 5, não se pode depois
 definir “x” como 10.Portanto, os dados são imutáveis e são evitados estados. Não existe efeitos colaterais.
 
@@ -47,12 +45,13 @@ import Data.List (insert)
 insertsort :: Ord a => [a] -> [a]
 insertsort = foldr insert []
 
-
+ Em Haskell existem apenas funções e todas as funções são unárias.Também não existem variáveis globais, apenas funções e variáveis locais, definidas dentro do escopo de cada função. Também não há estruturas de loop.Há duas funcionalidades importantes para a construção de listas. A primeira é a list comprehension, que permite construir listas sob forma de conjuntos.A segunda funcionalidade é a sequência aritmética, que permite construir listas sob forma de intervalos.
+ Dois sinais de menos iniciam um comentário. Comentários em Haskell só existem para uma linha, não para um conjunto delas.
 
 **Conclusão**
 
 
-O Haskell possui como propriedades a modificabilidade, a alta portabilidade e a grande reusabilidade.Pode ser compilada 
+ O Haskell possui como propriedades a modificabilidade, a alta portabilidade e a grande reusabilidade.Pode ser compilada 
 ou interpretada.Em Haskell não há uma estrutura orientada a objetos propriamente dita, por se tratar de uma linguagem 
 puramente funcional.As empresas que a utilizam são Fakebook, at&t , telecomunicações(EUA),Banco- Alemanha entre outros.
 
