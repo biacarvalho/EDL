@@ -46,7 +46,7 @@ insertsort :: Ord a => [a] -> [a]
 insertsort = foldr insert []
 
  Em Haskell existem apenas funções e todas as funções são unárias.Também não existem variáveis globais, apenas funções e variáveis locais, definidas dentro do escopo de cada função. Também não há estruturas de loop.Há duas funcionalidades importantes para a construção de listas. A primeira é a list comprehension, que permite construir listas sob forma de conjuntos.A segunda funcionalidade é a sequência aritmética, que permite construir listas sob forma de intervalos.
- Dois sinais de menos iniciam um comentário. Comentários em Haskell só existem para uma linha, não para um conjunto delas.
+ Outra característica ,dois sinais de menos iniciam um comentário. Comentários em Haskell só existem para uma linha, não para um conjunto delas.
 
 **Conclusão**
 
