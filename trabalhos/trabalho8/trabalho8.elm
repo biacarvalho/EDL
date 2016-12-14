@@ -60,11 +60,11 @@ evalProg s env =
                 else
                     (evalProg p2 env)
                     
-        While teste p   ->
-                if (evalExp teste env) /= 0 then
-                    env
-                else
-                    (evalProg (Seq p s) env)
+        While exp prog ->
+            if (evalExp exp env) /= 0 then
+              (evalProg (While exp prog) (evalProg prog env))
+            else
+              env
         
         
         
@@ -98,6 +98,15 @@ p6 = (Attr "ret" (Sub (Num 11) (Num 9)))
 
 p7 = (Attr "ret" (Mult (Num 11) (Num 9)))
 
+p8 : Prog
+p8 = Seq
+        (Attr "x" (Num 4))
+        (While (Var "x")
+          (Seq
+            (Attr "ret" (Add (Var "ret") (Num 4)))
+            (Attr "x" (Sub (Var "x") (Num 2)))))
 
 
-main = text (toString (lang p7))
+
+
+main = text (toString (lang p8))
